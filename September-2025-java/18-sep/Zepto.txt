@@ -1,0 +1,30 @@
+/*
+Scenario 4: Zepto – Order Delivery Tracker
+Objective:
+Track grocery orders and estimate delivery time.
+Question:
+Create a class Order.
+Use a parameterized constructor to initialize:
+orderId (String)
+customerName (String)
+deliveryTimeInMinutes (int)
+Method trackOrder():
+Prints delivery status: "Preparing", "Out for Delivery", "Delivered"
+
+Overload trackOrder():
+Version 1: No parameters (prints default status)
+Version 2: Takes current time in minutes and estimates time left.
+
+Validations:
+Delivery time must be between 1 and 30
+If time left is <= 0, print "Delivered"
+
+Sample Output:
+Order ID: ZP4567
+Status: Out for Delivery
+ETA: 5 minutes
+Order ID: ZP4568
+Status: Delivered
+*/
+
+ 

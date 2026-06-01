@@ -1,0 +1,115 @@
+Q1. Greeting Message
+--------------------
+
+Scenario:
+When the program starts, it should display a welcome message.
+
+Task Requirements:
+Create a functional interface named Greet with:
+void sayHello();
+
+Implement it using a lambda expression to print:
+Hello, Welcome to Java Programming!
+
+Q2. Add Two Numbers
+--------------------
+
+Scenario:
+A basic calculator is being built. It should add two integers.
+
+Task Requirements:
+Create an interface AddNumbers with:
+int add(int a, int b);
+
+Use a lambda expression to perform addition and print the result.
+
+Q3. Print User Name
+--------------------
+
+Scenario:
+A program reads a name input and prints it.
+
+Task Requirements:
+Create interface PrintName:
+void display(String name);
+
+Implement using lambda to print the entered name.
+
+Q4. Calculate Square of a Number
+--------------------
+
+Scenario:
+A math learning application calculates squares.
+
+Task Requirements:
+Create interface Square:
+int calculate(int num);
+
+Use lambda expression to compute the square of a number.
+
+Q5. Check If a Number Is Even
+--------------------
+Scenario:
+Program needs to determine whether a number is even or not.
+
+Task Requirements:
+Create interface CheckEven:
+boolean isEven(int num);
+
+Use lambda to check and print result.
+
+Q6. Convert Text to Uppercase
+--------------------
+Scenario:
+A typing application converts the entered text into uppercase.
+
+Task Requirements:
+Create interface ConvertText:
+String convert(String text);
+
+Use lambda expression to convert input to uppercase.
+
+Q7. Display Today’s Day
+--------------------
+Scenario:
+A smartwatch displays today’s day.
+
+Task Requirements:
+Create interface ShowDay:
+void display();
+
+Use lambda expression to print a fixed output like:
+"Today is Monday"
+
+Q8. Find Greater of Two Numbers
+--------------------
+Scenario:
+Program compares two numbers and displays the greater one.
+
+Task Requirements:
+Define interface CompareNumbers:
+int greater(int a, int b);
+
+Use lambda expression to return the greater number.
+
+Q9. Count Length of a Word
+--------------------
+Scenario:
+A word game counts how many letters a word contains.
+
+Task Requirements:
+Create interface WordLength:
+int length(String word);
+
+Use lambda expression to return and print the word length.
+
+Q10. Check Age Eligibility
+--------------------
+Scenario:
+Validate voting eligibility (age = 18).
+
+Task Requirements:
+Create interface AgeCheck:
+boolean check(int age);
+
+Use lambda expression to print "Eligible" or "Not Eligible".

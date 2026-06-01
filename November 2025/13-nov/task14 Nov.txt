@@ -1,0 +1,207 @@
+Scenario 1: ATM PIN Verification
+-------------------------------
+The user must enter a 4-digit PIN. If they enter something that is not
+a number, the program should catch the error.
+Test: Allow the user to enter the pin in form of String and check the required
+changes in your code.
+Test: Allow the user to enter the pin in form of integer and check the required
+changes in your code.
+
+Assignment
+Write a program that asks the user to enter a 4-digit PIN.
+If the user enters something invalid (letters, symbols, blank),
+handle it using a try-catch.
+
+Sample Test Case 1 (Valid PIN)
+Input
+1234
+
+Output
+PIN accepted.
+
+Sample Test Case 2 (Contains letters)
+Input
+12a4
+
+Output
+Invalid input. Please enter numbers only.
+
+Sample Test Case 3 (Too short)
+Input
+123
+
+Output
+Invalid PIN length. Must be 4 digits.
+
+Edge Case 5 (Special characters)
+Input
+*#%&
+
+Output
+Invalid input. Please enter numbers only.
+
+========================================================================
+Scenario 2: Simple Calculator
+The user enters two numbers and an arithmetic operator.
+Program should handle:
+user entering text instead of number
+user dividing by 0
+user entering invalid operator
+Assignment
+Create a calculator that reads two numbers and an operator (+ - * /).
+Use multiple catch blocks to handle different errors.
+Hint:
+use the following snippet inside try block:
+ switch (op) {
+                case "+" -> result = a + b;
+                case "-" -> result = a - b;
+                case "*" -> result = a * b;
+                case "/" -> result = a / b; // may throw ArithmeticException
+                default -> throw new IllegalArgumentException("Unknown operator");
+            }
+        .....
+
+Sample Test Case 1 (Valid)
+-------------------------
+Input
+5
+3
++
+
+Output
+8
+
+Test Case 2 (Division by zero)
+--------------------------------------
+Input
+10
+0
+/
+
+Output
+Error: Cannot divide by zero.
+
+Test Case 3 (Invalid operator)
+--------------------------------------
+Input
+7
+4
+$
+
+Output
+Error: Unknown operator.
+
+Test Case 4 (Non-numeric first number)
+--------------------------------------
+Input
+abc
+5
++
+
+Output
+Invalid number input.
+
+Test Case 5 (Non-numeric second number)
+--------------------------------------
+Input
+10
+xyz
+*
+
+Output
+Invalid number input.
+
+Edge Case 6 (Negative numbers)
+Input
+-5
+-10
+*
+
+Output
+50
+====================================================================================
+Scenario 3: Mobile Recharge System
+The user enters an amount to recharge their mobile balance.
+Whether the input is valid or not, the program should always print
+“Thank you for using the service”.
+
+Assignment
+Write a program that asks the user for a recharge amount.
+If user enters non-numeric input, show an error.
+Use a finally block to display a final message that always runs.
+Sample Test Case 1 (Valid amount)
+--------------------------------
+Input
+50
+
+Output
+Recharge successful: 50
+Thank you for using the service.
+
+Test Case 2 (Invalid: text)
+--------------------------------
+Input
+abc
+
+Output
+Invalid amount. Please enter a number.
+Thank you for using the service.
+
+Test Case 3 (Negative amount)
+-----------------------------
+Input
+-30
+
+Output
+
+Invalid amount. Must be positive.
+Thank you for using the service.
+
+Test Case 4 (Decimal number)
+--------------------------------
+Input
+19.99
+
+Output
+Recharge successful: 19.99
+Thank you for using the service.
+======================================================================================
+Scenario 4: Student Age Input
+The user enters their age; scanner automatically closes using
+try-with-resources.
+
+Assignment
+Write a program using try-with-resources to read a student’s age.
+If user enters something invalid, handle the error.
+
+Sample Test Case 1 (Valid)
+-------------------------------
+Input
+18
+
+Output
+Age recorded: 18
+
+Test Case 2 (Not a number)
+-------------------------------
+Input
+abc
+
+Output
+Invalid input. Please enter a number.
+
+Test Case 3 (Negative age)
+-------------------------------
+Input
+-5
+
+Output
+Invalid age. Age must be positive.
+
+Test Case 4 (Floating number)
+-------------------------------
+Input
+19.5
+
+Output
+Invalid input. Age must be a whole number.

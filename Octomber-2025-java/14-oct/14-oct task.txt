@@ -1,0 +1,76 @@
+You are working as a Java developer for ShopEase Pvt. Ltd., an e-commerce company.
+The company stores all product information (like product IDs, prices, and sales 
+frequencies) in simple array-based structures before migrating to a database system.
+
+Your task is to build Java programs to help the Product Data Analytics Team clean and
+process these arrays efficiently.
+
+
+Q1. Detect Duplicate Product IDs
+The company occasionally receives duplicate product entries due to synchronization 
+errors between branch servers.
+Write a Java program to print all duplicate product IDs from a given product list.
+
+Example:
+
+Input:
+productIDs = [101, 205, 101, 310, 101, 420, 605, 205, 518, 420]
+
+Output:
+Duplicate Product IDs: 101 205 420
+
+Q2. Update Discontinued Product Codes
+When a product is discontinued and reintroduced under a new code, you need to update 
+all its occurrences in the system.
+Write a Java method named modifyArrayElement that replaces every occurrence of oldProductCode with newProductCode.
+
+Example:
+Input:
+productCodes = [501, 502, 503, 504, 505, 502, 503]
+oldProductCode = 503
+newProductCode = 999
+
+Output:
+Updated Product Codes: [501, 502, 999, 504, 505, 502, 999]
+
+Q3. Find Frequency of Product Sales
+
+To determine the popularity of products, the marketing team wants to know how many times
+each product was sold.
+Write a Java program to display the frequency of each product ID in the sales list.
+
+Example:
+Input:
+salesData = [101, 102, 101, 103, 104, 102, 101, 104, 104]
+
+Output:
+101 ? 3 times
+102 ? 2 times
+103 ? 1 time
+104 ? 3 times
+
+Q4. Merge Sorted Product Price Lists
+The finance department receives two sorted arrays representing product prices from 
+two regional branches.
+Write a Java program to merge both lists into a single sorted array.
+Example:
+
+Input:
+pricesBranchA = [120, 250, 375]
+pricesBranchB = [200, 340, 400]
+
+Output:
+Merged Sorted Prices: [120, 200, 250, 340, 375, 400]
+
+Q5. Find Kth Highest Product Price
+The management team wants to know the 3rd most expensive product from the company’s 
+sorted price list.
+Write a Java program to find the kth largest price in the array.
+
+Example:
+Input:
+productPrices = [120, 340, 375, 400, 425, 480, 520, 600]
+k = 3
+
+Output:
+3rd highest price: 480

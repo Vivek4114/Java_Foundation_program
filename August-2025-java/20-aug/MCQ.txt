@@ -1,0 +1,98 @@
+1. Which of the following best defines a static variable?
+a) A variable created inside a method using the static keyword
+b) A variable created outside any method, block, or constructor using the static keyword
+c) A variable created inside a loop using the static keyword
+d) A variable that cannot be changed once initialized
+Answer: b ) A variable created outside any method, block, or constructor using the static keyword
+
+2. When should a variable be declared as static?
+a) When each object needs a different value
+bWhen)  the data is same for all objects
+c) When the variable must be immutablea
+d) When the variable is only used inside a method
+Answer: b ) when the data is same for all objects
+
+
+3. What is a non-static variable also known as?
+a) Global variable
+b) Local variable
+c) Instance variable
+d) Constant
+Answer: c) Instance variable
+
+
+4. Where are static variables stored in memory?
+a) Stack memory
+b) Heap memory
+c) Static Pool Area
+d) Method area only
+Answer: c) Static Pool Area
+
+
+5. Where are instance variables stored in memory?
+a) Static Pool Area
+b) Inside the object in heap memory
+c) Method area
+d) Stack memory
+Answer: b) Inside the object in heap memory
+
+
+6. Which of the following is NOT a recommended way to access a static variable?
+a) Directly
+b) Using the class name
+c) Using the object’s reference variable
+d) Through inheritance
+Answer: c) Using the object’s reference variable
+
+
+7. What is the default value of a boolean variable in Java?
+a) true
+b) false
+c) null
+d) 0
+Answer: b) false
+
+
+8. What will be the default value of a String variable if it is not initialized?
+a) "" (empty string)
+b) "null" (as text)
+c) null
+d) Undefined
+Answer: c) null
+
+
+9. An object in Java is best described as:
+a) A method that performs an action
+b) A set of related classes
+c) A unique entity with variables (characteristics) and methods (behaviors)
+d) A block of memory
+Answer: c) A unique entity with variables (characteristics) and methods (behaviors)
+
+
+10. What is the default value of a char variable?
+a) '0'
+b) ' ' (space)
+c) '\u0000'
+d) null
+Answer: c) '\u0000'
+
+
+11. What will be the output of the following code?
+class Test {
+    static int a;
+    int b;
+
+    public static void main(String[] args) {
+        Test obj = new Test();
+        System.out.println(obj.a);
+        System.out.println(obj.b);
+    }
+}
+a) Compilation error
+b) 0 and 0
+c) null and null
+d) Garbage values
+
+Answer:b) 0 and 0
+
+--------------------------------------------------------------------------------------

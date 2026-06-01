@@ -1,0 +1,92 @@
+import java.util.Scanner;
+
+public class RiderBookingApp{
+    public static void main(String[] args){
+	Scanner sc = new Scanner(System.in);
+    String pickupLocation = sc.next();
+    String dropLocation = sc.next();
+    double distance = sc.nextDouble();
+
+    Ride r1 = new Ride();
+   
+    r1.setPickupLocation(pickupLocation);
+    r1.setDroplocation(dropLocation);
+    r1.setDistance(distance);
+
+    RideService m = new RideService();
+	double fare1 = m.calculateFare(r1);
+	System.out.println(r1.displayRide(fare1));
+  
+
+     
+
+    }
+}
+
+class Ride{
+    private String pickupLocation;
+    private String dropLocation;
+    private double distance;
+	 
+      
+	 
+     public void setPickupLocation(String pickupLocation){
+        this.pickupLocation = pickupLocation;
+     }
+
+     public void setDroplocation(String dropLocation){
+        this.dropLocation = dropLocation;
+     }
+
+     public void setDistance(double distance){
+        if(distance > 0){
+        this.distance = distance;
+        }
+        else{
+            System.out.println("Invalid Distance");
+            System.exit(9);
+        }
+
+     }
+
+     public String getPickupLocation(){
+            return pickupLocation;
+     }
+
+     public String getDroplocation(){
+            return dropLocation;
+     }
+
+     public int getDistance(){
+            return distance;
+     }
+	 
+	 
+
+     public String displayRide(double fare ){
+		 
+        return "Pickup:"+pickupLocation +
+                ", Drop: "+dropLocation+
+                ", Distance: "+ distance + " km, " +"Fare : " + fare;
+     }
+
+}
+
+class RideService{
+
+    double fare;
+	 
+    public double calculateFare(Ride r){
+        if(r.getDistance() > 0){
+          fare =  r.getDistance() * 10;
+          System.out.println("Fare calculated successfully.");
+		  //r.fare = fare;
+        }
+		return fare;
+         
+		
+		
+    }
+	
+	 
+}

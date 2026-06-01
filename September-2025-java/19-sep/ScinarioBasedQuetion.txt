@@ -1,0 +1,254 @@
+Scenario 1:
+Imagine you are building a very simple version of an e-commerce system.
+Each customer can place an order for just one item at a time (we'll keep
+it simple — no lists yet!). The order includes:
+The item’s name
+The item’s price
+The quantity
+The delivery address
+The payment method
+Now, the user wants to place the same order again, but with a new delivery
+address and a different payment method.
+
+You must use a copy constructor to duplicate the original order so that the
+item details remain the same, but the new order can have different address
+and payment info.
+
+Your Task
+Create a class called Order with the following fields:
+String itemName
+double itemPrice
+int quantity
+String deliveryAddress
+String paymentMethod
+
+Write two constructors in the Order class:
+A regular constructor to create a new order.
+A copy constructor that copies all the item-related fields from another
+Order object, but lets the user change the deliveryAddress and paymentMethod.
+
+In your main method:
+Create an original order with any values you like.
+Create a second order using the copy constructor, changing only the deliveryAddress
+and paymentMethod.
+
+Print both orders to show that:
+The item details are the same
+The addresses and payment methods are different
+
+Learning Goals
+Understand how a copy constructor works.
+Learn how to duplicate an object while modifying certain values.
+Avoid changing the original object when creating a new one based on it.
+
+Expected Output Example
+Original Order:
+Item: Laptop
+Price: Rs. 1000.0
+Quantity: 1
+Delivery Address: 123 Elm Street
+Payment Method: Credit Card
+------------------------------
+Reordered (Copied) Order:
+Item: Laptop
+Price: $1000.0
+Quantity: 1
+Delivery Address: 456 Oak Avenue
+Payment Method: PayPal
+------------------------------
+------------------------------------------------------------------------------------------------------------------------
+Scenario 2:
+Imagine you are building a simple banking system. A customer has a bank account
+with the following details:
+
+Account holder’s name
+Account number
+Branch code
+Account balance
+
+Now, the customer opens a new account in another branch but with the same account
+holder name and balance, while the account number and branch code are different.
+
+Your Task
+Create a class called BankAccount with the following fields:
+String holderName
+String accountNumber
+String branchCode
+double balance
+
+Write two constructors in the BankAccount class:
+A regular constructor to create a new bank account.
+A copy constructor that copies the holderName and balance from another
+BankAccount object, but lets the user set a new accountNumber and branchCode.
+
+In your main method:
+Create an original bank account with any values you like.
+Create a second bank account using the copy constructor, changing only the account number and branch code.
+
+Print both accounts to show that:
+The holder name and balance are the same
+The account number and branch code are different
+
+Learning Goals
+Understand copy constructor use with partial field changes.
+Learn how to safely duplicate objects while modifying selective fields.
+
+Expected Output Example
+Original Account:  
+Holder Name: Asish Kumar  
+Account Number: ACC123  
+Branch Code: BR001  
+Balance: Rs. 5000.0  
+------------------------------  
+New Account (Copied):  
+Holder Name: Asish Kumar  
+Account Number: ACC456  
+Branch Code: BR002  
+Balance: Rs. 5000.0  
+------------------------------  
+------------------------------------------------------------------------------------------------------------------------
+Scenario 3:
+
+Imagine you manage student records. Each student has these details:
+Name
+Age
+Grade level
+School name
+
+Now, a student is promoted to the next grade. All details remain the same
+except the grade level, which increases by 1.
+
+Your Task
+Create a class called Student with the following fields:
+String name
+int age
+int gradeLevel
+String schoolName
+
+Write two constructors in the Student class:
+A regular constructor to create a student record.
+A copy constructor that copies all fields from another Student object but
+automatically increments the gradeLevel by 1.
+
+In your main method:
+
+Create an original student record with any values you like.
+Create a promoted student record using the copy constructor.
+Print both student records to show that:
+
+All fields are the same except the grade level, which is incremented in the
+copied record.
+
+Learning Goals
+
+Practice copy constructors with automatic modification of a field.
+Reinforce object duplication with transformation.
+
+Expected Output Example
+Original Student:  
+Name: Sachin  
+Age: 15  
+Grade Level: 9  
+School: Green Valley High  
+------------------------------  
+Promoted Student (Copied):  
+Name: Sachin  
+Age: 15  
+Grade Level: 10  
+School: Green Valley High  
+------------------------------  
+------------------------------------------------------------------------------------------------------------------------
+Scenario 4:
+Imagine you manage vehicle registrations. Each vehicle has the following details:
+Owner name
+Model
+Color
+Registration number
+
+When a vehicle is sold to another person, you want to create a new vehicle record
+by copying the old vehicle’s details but changing the owner name.
+
+Your Task
+Create a class called Vehicle with the following fields:
+
+String ownerName
+String model
+String color
+String registrationNumber
+
+Write two constructors in the Vehicle class:
+A regular constructor to create a vehicle record.
+A copy constructor that copies all details from another Vehicle object but accepts
+a new owner name.
+
+In your main method:
+Create an original vehicle record.
+Create a transferred vehicle record using the copy constructor with a new owner name.
+
+Print both vehicle records to show that:
+All details except the owner name are the same.
+Learning Goals
+Learn how to clone an object while changing ownership details.
+Understand selective field modification in copy constructors.
+
+Expected Output Example
+
+Original Vehicle:  
+Owner Name: Amit Reddy  
+Model: Honda Civic  
+Color: Blue  
+Registration Number: TS09K1234  
+------------------------------  
+Transferred Vehicle (Copied):  
+Owner Name: Sabnam Khan
+Model: Honda Civic  
+Color: Blue  
+Registration Number: TS09K1234
+------------------------------  
+------------------------------------------------------------------------------------------------------------------------
+Scenario 5:
+Imagine you work at a hospital managing medical reports. Each report includes:
+Patient name
+Medical condition
+Report date
+Doctor’s notes
+
+When a patient returns for a follow-up, you create a new report copying the
+patient and condition details but changing the report date and doctor’s notes.
+
+Your Task
+Create a class called MedicalReport with the following fields:
+String patientName
+String condition
+String reportDate
+String doctorNotes
+
+Write two constructors in the MedicalReport class:
+A regular constructor to create a medical report.
+A copy constructor that copies patient name and condition from another report
+but allows new report date and doctor’s notes.
+
+In your main method:
+
+Create an original medical report.
+Create a follow-up report using the copy constructor with new date and notes.
+Print both reports to show that:
+Patient and condition remain the same.
+Date and notes are updated in the copied report.
+
+Learning Goals
+Understand how copy constructors support versioning and updates.
+Practice duplicating objects with selective field changes.
+
+Expected Output Example
+Original Medical Report:  
+Patient Name: Asish Kumar  
+Condition: Flu  
+Report Date: 2025-01-10  
+Doctor Notes: Prescribed rest and fluids.  
+------------------------------  
+Follow-Up Medical Report (Copied):  
+Patient Name: Asish Kumar  
+Condition: Flu  
+Report Date: 2025-01-19  
+Doctor Notes: Symptoms improving, continue medication.  

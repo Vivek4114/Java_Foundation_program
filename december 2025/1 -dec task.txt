@@ -1,0 +1,290 @@
+Scenario 1: Grocery Shopping List
+Problem Statement
+You must design a Java program that manages a grocery shopping list using an
+ArrayList<String>.
+The program must support adding items, removing items, replacing items, and
+checking the size of the list.
+
+Constraints
+Only Strings may be stored in the grocery list.
+Index values must be valid (0 to size-1).
+Removal must handle cases where the item does not exist.
+Replacement must not occur if the index is out of bounds.
+
+Input Format
+The program performs the following operations in order:
+Create an ArrayList
+Add grocery items
+Remove an item
+Replace an item
+Display size of the ArrayList
+
+Output Format
+Display the final list of items.
+Display size after operations.
+
+Sample Input
+Add: Milk
+Add: Eggs
+Add: Butter
+Remove: Eggs
+Replace index 1 with Bread
+
+Sample Output
+Final Grocery List: [Milk, Bread]
+Total Items: 2
+
+Test Cases
+Test Case 1
+Input
+Milk, Eggs, Sugar
+Remove Eggs
+Replace index 1 with Bread
+
+Output
+[Milk, Bread]
+
+Test Case 2
+InputMilk
+Remove Apples
+Replace index 5 with Bread
+
+Output
+[Milk]
+Error: Cannot replace at invalid index.
+
+Class Design
+Class Name: GroceryListManager
+Variables
+private ArrayList<String> groceryList;
+
+Methods
+public void addItem(String item);
+public int getItemCount();
+public void removeItem(String item);
+public void replaceItem(int index, String newItem);
+public void displayList();
+
+Scenario 2: Student Grades Management
+Problem Statement
+Create a Java program to manage student grades using an ArrayList<Integer>.
+The system should add grades, calculate the average, find the highest grade,
+and remove failing grades (<60).
+
+Constraints
+--------------
+- Grades must be integers between 0–100.
+- Average should be a double.
+- Removing failing grades must not cause index shifting errors.
+
+Input Format
+--------------
+- Sequence of operations:
+                         - Add grades
+                           - Calculate average
+                           - Find highest grade
+                           - Remove failing grades
+
+Output Format
+--------------
+- Display grades after cleanup.
+- Display highest & average grade.
+
+Sample Input
+--------------
+Add: 85
+Add: 76
+Add: 93
+Add: 55
+Remove failing grades
+
+Sample Output
+--------------
+Grades after removal: [85, 76, 93]
+Highest Grade: 93
+Average Grade: 84.67
+
+Test Cases
+--------------
+Test Case 1
+--------------
+Input:
+--------------
+10 20 30 40
+
+
+Output:
+--------------
+Grades after removal: []
+Highest Grade: None
+Average Grade: 0
+
+Test Case 2
+--------------
+Input:
+70 80 90
+
+
+Output:
+--------------
+Highest: 90
+Average: 80.0
+
+Class Design
+Class Name: GradeManager
+Variables
+private ArrayList<Integer> grades;
+
+Methods
+public void addGrade(int grade);
+public double calculateAverage();
+public int getHighestGrade();
+public void removeFailingGrades();
+public void displayGrades();
+
+Scenario 3: Library Book Titles
+Problem Statement
+Design a program that uses an ArrayList<String> to maintain a list of book
+titles in a library.
+
+Constraints
+--------------
+- Only Strings allowed.
+- Duplicate titles are allowed.
+- Sorting must be alphabetical.
+
+Input Format
+--------------
+Operations:
+Add books
+Check if a book exists
+Clear all books
+Sort titles
+
+Output Format
+--------------
+Display book list after operations.
+
+Sample Input
+--------------
+Add: The Great Gatsby
+Add: Java SE8
+Check: Java SE8
+Sort
+Clear All
+
+Sample Output
+Book Found: Java SE8
+Sorted Titles: [Java SE8, The Great Gatsby]
+List Cleared.
+
+Test Cases
+-----------
+Test Case 1
+-----------
+Input:
+-----------
+Harry Potter, Dune, It
+Sort
+
+
+Output:
+-----------
+[Dune, Harry Potter, It]
+
+Test Case 2
+-----------
+Input:
+-----------
+Clear
+
+Output:
+-----------
+[]
+
+Class Design
+-----------
+Class Name: LibraryManager
+Variables
+private ArrayList<String> bookTitles;
+
+Methods
+-----------
+public void addBook(String title);
+public boolean containsBook(String title);
+public void clearBooks();
+public void sortBooks();
+public void displayBooks();
+
+Scenario 4: Employee Names in a Company
+Problem Statement
+Create a program using ArrayList<String> to manage employee names.
+
+Constraints
+-----------
+- Names must be Strings.
+- Searching must return index or -1 if not found.
+- Iteration must print all names.
+
+Input Format
+-----------
+
+Operations:
+-----------
+Add employee
+Find index
+Replace employee
+Print list
+
+Output Format
+-----------
+Display all employee names and search results.
+
+Sample Input
+-----------
+Add: John Doe
+Add: Jane Smith
+Find: Jane Smith
+Replace index 1 with Emily Johnson
+
+Sample Output
+-----------
+Jane Smith found at index 1
+Updated List:
+John Doe
+Emily Johnson
+
+Test Cases
+-----------
+Test Case 1
+-----------
+Input
+Adam, Eve
+Find: Noah
+
+Output
+-----------
+Noah not found.
+
+Test Case 2
+-----------
+Input
+-----------
+Replace index 5 with Mark
+
+Output
+-----------
+Error: Invalid index.
+
+Class Design
+-----------
+Class Name: EmployeeManager
+Variables
+private ArrayList<String> employees;
+
+Methods
+-----------
+public void addEmployee(String name);
+public int findEmployee(String name);
+public void replaceEmployee(int index, String newName);
+public void printEmployees();

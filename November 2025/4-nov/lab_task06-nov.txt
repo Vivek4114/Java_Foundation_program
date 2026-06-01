@@ -1,0 +1,188 @@
+HackerRank Practice Set – Wrapper Classes in Java
+=====================================================
+
+Question 1: User Age Validation (Integer Wrapper)
+----------------------------------------------------------
+Problem Statement:
+Write a program to validate a user’s age entered as a string. You must convert the string to an integer using a wrapper class.
+If the conversion fails (invalid input), print "Invalid age". If the conversion succeeds, check if the user is eligible (= 18 years).
+
+Class Name: AgeValidator
+
+Instance Variables:
+private String ageInput;
+
+Constructor:
+public AgeValidator(String ageInput)
+
+Methods:
+public Integer convertToAge() — Converts string to Integer, prints "Invalid age" if invalid.
+public void checkEligibility() — Prints "Eligible" if age = 18 else "Not Eligible".
+
+Input Format:
+<age as string>
+
+Output Format:
+Eligible / Not Eligible / Invalid age
+
+Sample Test Cases:
+Input: 25 ? Eligible
+Input: 16 ? Not Eligible
+Input: abc ? Invalid age
+Input: -5 ? Not Eligible
+Input: (empty) ? Invalid age
+
+
+Question 2: Temperature Sensor Reading (Double Wrapper)
+----------------------------------------------------------
+Problem Statement:
+Convert string temperature data into Double wrapper and determine if it is normal (= 40°C) or high.
+
+Class Name: TemperatureReader
+
+Instance Variables:
+private String temperature;
+
+Constructor:
+public TemperatureReader(String temperature)
+
+Methods:
+public Double convertToDouble() — Converts to Double, prints "Invalid temperature" if invalid.
+public void showStatus() — Prints "Normal" if = 40 else "High Temperature Alert".
+
+Input Format:
+<temperature as string>
+
+Output Format:
+Normal / High Temperature Alert / Invalid temperature
+
+Sample Test Cases:
+Input: 36.5 ? Normal
+Input: 41.2 ? High Temperature Alert
+Input: temp ? Invalid temperature
+Input: 40.0 ? Normal
+Input: (empty) ? Invalid temperature
+
+
+Question 3: Student Marks Analyzer (Auto-boxing / Unboxing)
+----------------------------------------------------------
+Problem Statement:
+A student’s three subject marks are received as int values. Use wrapper classes to demonstrate auto-boxing and unboxing, 
+and calculate average.
+
+Class Name: MarkAnalyzer
+
+Instance Variables:
+private Integer m1, m2, m3;
+
+Constructor:
+public MarkAnalyzer(int m1, int m2, int m3)
+
+Methods:
+public double average() — Calculates and returns average using unboxing.
+
+Input Format:
+m1 m2 m3
+
+Output Format:
+Average: <average value>
+
+Sample Test Cases:
+Input: 80 90 100 ? Average: 90.0
+Input: 50 60 70 ? Average: 60.0
+Input: 0 0 0 ? Average: 0.0
+Input: 75 85 65 ? Average: 75.0
+
+
+Question 4: Net Salary Calculation (Wrapper null handling)
+----------------------------------------------------------
+Problem Statement:
+Calculate net salary using base salary and optional bonus. If bonus is null, treat as 0.0.
+
+Class Name: SalaryCalculator
+
+Instance Variables:
+private double baseSalary;
+private Double bonus;
+
+Constructor:
+public SalaryCalculator(double baseSalary, Double bonus)
+
+Methods:
+public double getNetSalary() — Returns baseSalary + bonus (treat bonus as 0.0 if null).
+
+Input Format:
+baseSalary bonus
+(If bonus = "null", treat it as null)
+
+Output Format:
+Net Salary: <amount>
+
+Sample Test Cases:
+Input: 50000 5000 ? Net Salary: 55000.0
+Input: 45000 null ? Net Salary: 45000.0
+Input: 60000 0 ? Net Salary: 60000.0
+
+
+Question 5: Rating Comparison (Wrapper Caching)
+----------------------------------------------------------
+Problem Statement:
+Compare two Integer ratings and show difference between == and .equals() behavior.
+
+Class Name: RatingComparison
+
+Instance Variables:
+private Integer rating1, rating2;
+
+Constructor:
+public RatingComparison(Integer rating1, Integer rating2)
+
+Methods:
+public void compare() — Prints results of == and .equals() comparison.
+
+Output Format:
+== result: true/false
+equals() result: true/false
+
+Sample Test Cases:
+Input: 100 100 ? == result: true, equals() result: true
+Input: 150 150 ? == result: false, equals() result: true
+Input: 50 60 ? == result: false, equals() result: false
+
+
+Question 6: Boolean Config Reader (Feature Toggle)
+----------------------------------------------------------
+Problem Statement:
+Convert string "true"/"false" into Boolean wrapper and show feature status.
+
+Class Name: FeatureToggle
+
+Instance Variables:
+private String flag;
+
+Constructor:
+public FeatureToggle(String flag)
+
+Methods:
+public Boolean isEnabled() — Returns Boolean value from Boolean.parseBoolean().
+
+Input Format:
+true / false
+
+Output Format:
+Feature Enabled / Feature Disabled
+
+Sample Test Cases:
+Input: true ? Feature Enabled
+Input: false ? Feature Disabled
+Input: TRUE ? Feature Enabled
+Input: yes ? Feature Disabled
+
+
+Concepts Covered:
+-----------------
+Wrapper Classes (Integer, Double, Boolean)
+Auto-boxing and Unboxing
+Parsing exceptions
+Wrapper caching range (-128 to +127)
+Null handling in wrappers

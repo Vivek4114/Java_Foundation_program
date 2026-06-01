@@ -1,0 +1,48 @@
+Problem Title: Class Cast Exception
+Scenario:
+A program stores an object of one type in a reference of type Object. If the program tries 
+to cast it to an incompatible type, it should throw a ClassCastException.
+
+Input Example:
+Object obj = new String("test");
+Integer i = (Integer) obj;
+
+
+Expected Output:
+ClassCastException
+
+
+Additional Notes:
+Casting to a compatible type (e.g., String s = (String) obj) works correctly.
+This demonstrates runtime type-checking during type casting in Java.
+
+Problem Title: Negative Array Size Exception
+Scenario:
+A program attempts to create an array with a size specified by the user. If the size is negative, the program should throw a NegativeArraySizeException.
+
+Input Example:
+int[] arr = new int[-5];
+
+
+Expected Output:
+NegativeArraySizeException
+
+Additional Notes:
+Creating an array with a positive size works normally.
+This demonstrates exception handling when an array is declared with an invalid (negative) size in Java.
+
+Problem Title: String Index Out of Bounds Exception
+Scenario:A program attempts to access a character at an index that exceeds the length of a string. If the index is invalid, the program should throw a StringIndexOutOfBoundsException.
+
+Input Example:
+String s = "abc";
+s.charAt(5);
+
+
+Expected Output:
+StringIndexOutOfBoundsException
+
+
+Additional Notes:
+Accessing valid indices (e.g., s.charAt(0) to s.charAt(2)) works normally.
+This demonstrates exception handling in Java when trying to access invalid positions in a string.

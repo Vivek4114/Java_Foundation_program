@@ -1,0 +1,96 @@
+LAB QUESTION 1 – Exceed Daily Limit
+Problem Title: Exceed Daily Withdrawal Limit Using Custom Exception
+Objective:
+To implement custom exception handling in Java for enforcing business
+rules related to banking transactions.
+
+Problem Description:
+Write a Java program that simulates a simple ATM withdrawal process.
+The system must enforce a daily withdrawal limit. If the user attempts
+to withdraw an amount greater than the allowed limit, the program
+should throw and handle a custom exception named:
+DailyLimitExceededException
+
+Tasks:
+Create a custom exception class DailyLimitExceededException
+(checked exception).
+Create a class BankAccount that contains:
+ - An integer dailyLimit
+ - A method withdraw(int amount)
+
+In the withdraw() method:
+If amount <= dailyLimit, print:
+Withdrawal Successful: <amount>
+
+If amount > dailyLimit, throw the custom exception with the message:
+Withdraw <amount> exceeds limit <dailyLimit>
+
+In the main method:
+Read daily limit and withdrawal amount from the user.
+Call the withdraw() method and handle the exception properly.
+
+Sample Input:
+Daily Limit: 10000
+Withdraw: 15000
+
+Sample Output:
+DailyLimitExceededException: Withdraw 15000 exceeds limit 10000
+
+Notes:
+Valid withdrawals should print a success message.
+This exercise demonstrates the creation and use of custom exceptions in Java.
+=====================================================================
+LAB QUESTION 2 – Account Not Active 
+Problem Title: Transaction Restriction on Inactive Accounts Using Custom Exception
+Objective:
+To practice implementing custom exceptions in Java to enforce business rules
+related to account status.
+
+
+Problem Description:
+Create a Java program that simulates performing transactions on a bank account.
+If the user attempts to perform a deposit or withdrawal on an inactive account,
+the system must throw a custom exception named:
+AccountInactiveException
+
+Tasks:
+- Create a custom exception class AccountInactiveException (checked exception).
+- Create a class Account that contains:
+      - A string status (either "active" or "inactive")
+      - A method performTransaction(String action)
+
+In the method:
+If status is "active", print:
+Transaction Successful: <action>
+
+If status is "inactive", throw the custom exception with the message:
+Cannot perform <action>, account inactive
+
+In the main method:
+ - Read account status and action from the user.
+ - Call the transaction method and handle the exception.
+
+Sample Input:
+Status: inactive
+Action: Deposit
+
+Sample Output:
+AccountInactiveException: Cannot perform Deposit, as the account is inactive
+
+LAB QUESTION 8 – ATM Out of Cash
+
+Problem Title: Scenario:
+An ATM tracks how much money it has remaining.
+If a user attempts to withdraw more money than the ATM contains, throw:
+ATMOutOfCashException
+
+Input Example:
+ATM Cash Available: 20000
+Withdraw Amount: 25000
+
+Expected Output:
+ATMOutOfCashException: ATM has insufficient cash (Available: 20000)
+
+Notes:
+Valid withdrawal prints:
+Dispensing: <amount>

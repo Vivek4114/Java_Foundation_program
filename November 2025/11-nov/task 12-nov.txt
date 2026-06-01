@@ -1,0 +1,182 @@
+Electricity Bill Splitter
+--------------------------
+A group of roommates wants to split the electricity bill equally.
+Ask the user to enter total bill amount and number of roommates.
+Display the per-person share as the bill is splitted equally among each.
+If the number of roommates is 0, handle the ArithmeticException.
+
+Expected Output (Valid Input)
+Enter total bill amount: 1200
+Enter number of roommates: 4
+Each person has to pay: 300.0
+Thank you!
+
+Expected Output (Exception Case)
+Enter total bill amount: 1500
+Enter number of roommates: 0
+Error: Number of roommates cannot be zero!
+Thank you!
+--------------------------------------------------------------------------
+
+Q2. Speed Monitoring System – Vehicle Tracking
+Scenario:
+A traffic control system records distance traveled and time taken by a
+vehicle, and needs to compute speed.
+
+Requirements:
+Input the distance (in km).
+Input the time taken (in hours).
+
+Compute: speed = distance / time
+If the time entered is 0, catch ArithmeticException and display:
+"Time cannot be zero. Cannot compute speed."
+--------------------------------------------------------------------------
+Q3. Loan EMI Calculator – Banking Application
+Scenario:
+A bank loan EMI calculator needs to determine monthly payment.
+
+Requirements:
+Input loan amount.
+Input number of months to repay.
+Calculate: emi = loanAmount / months
+
+If months entered is 0, catch exception and show:
+"Invalid duration. Months cannot be 0."
+--------------------------------------------------------------------------
+Q4. Name Initial Finder – Online Form
+Scenario:
+A web form asks users to enter their full name and selects a character
+from the name based on a given index.
+
+Requirements:
+Input full name.
+Input index number.
+
+Display the character at that index.
+If user enters an out-of-bound index, catch StringIndexOutOfBoundsException
+and show:
+"Invalid position. Index is outside the name length."
+--------------------------------------------------------------------------
+Q5. Password Character Mask Viewer – Security Feature
+Scenario:
+Users enter a password, and the system needs to display the third character
+as part of formatting.
+
+Requirements:
+Input a password string.
+Display the third character.
+If password length < 3, handle exception and show:
+"Password too short to fetch 3rd character."
+--------------------------------------------------------------------------
+Q6. Reverse Character Access – Text Analyzer
+
+Scenario:
+A text analyzer allows users to get a character from end using
+index (0 = last char, 1 = second last, etc.)
+
+Requirements:
+Input a string.
+Input a reverse index.
+Convert index using: charIndex = string.length() - reverseIndex - 1
+If invalid, catch exception and show:
+
+"Invalid reverse index. Please try again."
+--------------------------------------------------------------------------
+Q7. Student Marks Viewer – College Portal
+Scenario:
+A college stores marks of 5 students in an array. A teacher wants to
+retrieve a specific student's marks.
+
+Requirements:
+Accept marks of 5 students into an array.
+Ask user to enter the array index to view marks.
+If the index entered is outside 0–4, catch exception and show:
+"Invalid student index."
+--------------------------------------------------------------------------
+Q8. Shopping Cart Program – E-commerce App
+Scenario:
+An online shopping cart holds the price of 3 items only (fixed array size).
+
+Requirements:
+Create an array of size 3 to store product prices.
+Allow user to update the price of an item by index.
+If index entered is >2 or <0, catch exception and show:
+"Invalid cart location. Item does not exist."
+--------------------------------------------------------------------------
+Q9. Weekday Finder – Calendar System
+Scenario:
+A calendar app needs to display the name of the weekday based on a number (1–7).
+
+Requirements:
+Create a string array containing Mon–Sun.
+Ask user to enter a number (1–7).
+Display the corresponding day.
+
+If invalid number (like 0 or 8), catch exception and show:
+"Invalid day number. Enter value from 1–7."
+--------------------------------------------------------------------------
+Q10. Employee Details Printer – HR System
+Scenario:
+An HR system tries to print an employee's details, but the employee
+object may not yet be initialized.
+
+Requirements:
+Create an Employee class with variable name.
+Declare an object reference, but assign null.
+Attempt to display employee name.
+Handle NullPointerException and show:
+"Employee record not found."
+--------------------------------------------------------------------------
+Q11. Contact Details Viewer – Phone App
+Scenario:
+A contact app shows details of the selected contact, but sometimes the
+object is null.
+
+Requirements:
+Create Contact class (name, phone).
+Declare a contact object but do not initialize.
+Attempt to print contact details.
+Handle exception and show:
+"No contact selected."
+--------------------------------------------------------------------------
+Q12. Book Inventory System – Library Software
+Scenario:
+A library system tries to display book information before loading data.
+
+Requirements:
+Create Book class (title, author).
+Declare a Book object and set it to null.
+Attempt to print object details.
+Catch null pointer and show:
+"Book information unavailable."
+--------------------------------------------------------------------------
+Q13. Banking Transaction Simulator – ATM Interface
+
+Scenario:
+An ATM allows users to:
+Withdraw money.
+View previous transactions stored in an array.
+Access a transaction by index.
+
+Requirements:
+Use a menu-driven structure (loop).
+
+Handle:
+ArithmeticException (invalid withdrawal amount)
+ArrayIndexOutOfBoundsException (transaction history index)
+NullPointerException (user account not initialized)
+--------------------------------------------------------------------------
+Q14. Student Management System – Academic Record Application
+Scenario:
+A classroom management program maintains:
+An array storing student names.
+A feature that lets user fetch a letter from the name by index.
+A module that calculates average marks.
+
+Requirements:
+
+Handle:
+
+ArrayIndexOutOfBoundsException when adding more students than allowed
+StringIndexOutOfBoundsException for name character access
+ArithmeticException if average calculation divides by zero

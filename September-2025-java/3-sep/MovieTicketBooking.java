@@ -1,0 +1,135 @@
+/*
+ Movie Ticket Booking System
+Develop a system for a movie multiplex to manage movie ticket bookings. Each ticket
+includes details about the movie, seat number, and ticket price.
+
+Task:
+Create a class MovieTicket with private fields:
+String movieName   stores the name of the movie.
+int seatNumber   stores the seat number assigned to the ticket.
+double ticketPrice  stores the cost of the ticket.
+
+Implement the following:
+Setter Methods: Use the this keyword to resolve name conflicts.
+Getter Methods: Allow other classes to access private field values.
+Write a test class to:
+Create tickets for three movies (MovieTicket objects).
+Set the details of each ticket using setter methods.
+Retrieve and print ticket details using getter methods.
+Update the ticket price of one movie and print the updated ticket details.
+*/
+import java.util.Scanner;
+class MovieTicketBooking{
+	
+	public static void main(String [] args){
+		Scanner sc = new Scanner(System.in);
+		MovieTicket m1 = new MovieTicket();
+		
+		System.out.println("Enter the Movie Name: ");
+		String movieName = sc.nextLine();
+		m1.setMovieName(movieName);
+		
+		System.out.println("Enter the Seat Number: ");
+		int seatNumber = sc.nextInt();
+		m1.setSeatNumber(seatNumber);
+		
+		System.out.println("Enter the Ticket Price: ");
+		double ticketPrice = sc.nextDouble();
+		m1.setTicketPrice(ticketPrice);
+		
+		
+		
+		
+		MovieTicket m2 = new MovieTicket();
+		sc.nextLine();
+		System.out.println("Enter the Movie Name: ");
+		String movieName1 = sc.nextLine();
+		m2.setMovieName(movieName1);
+		
+		System.out.println("Enter the Seat Number: ");
+		int seatNumber1 = sc.nextInt();
+		m2.setSeatNumber(seatNumber1);
+		
+		System.out.println("Enter the Ticket Price: ");
+		double ticketPrice1 = sc.nextDouble();
+		m2.setTicketPrice(ticketPrice1);
+		
+		
+		
+		MovieTicket m3 = new MovieTicket();
+		sc.nextLine();
+		System.out.println("Enter the Movie Name: ");
+		String movieName3 = sc.nextLine();
+		m3.setMovieName(movieName3);
+		
+		System.out.println("Enter the Seat Number: ");
+		int seatNumber3 = sc.nextInt();
+		m3.setSeatNumber(seatNumber3);
+		
+		System.out.println("Enter the Ticket Price: ");
+		double ticketPrice3 = sc.nextDouble();
+		m3.setTicketPrice(ticketPrice3);
+		
+		System.out.println(m1.displayDetails());
+		System.out.println(m2.displayDetails());
+		System.out.println(m3.displayDetails());
+		
+		
+		
+		
+		
+	}
+
+
+}
+
+class MovieTicket
+{
+	private String movieName;
+	private	int seatNumber;
+	private double ticketPrice;
+	
+	public void setMovieName(String movieName){
+		
+		this.movieName = movieName;
+	}
+	
+	public void setSeatNumber(int seatNumber){
+		if(seatNumber > 0){
+		this.seatNumber = seatNumber;
+		}
+		else{
+			System.out.println("kindly provide Valid Seat Number");
+			System.exit(0);
+		}
+	}
+	
+	public void setTicketPrice(double ticketPrice){
+		if(ticketPrice > 0){
+		this.ticketPrice = ticketPrice;
+		}
+		else{
+			System.out.println("Kindly price valid Ticket Price");
+			System.exit(1);
+		}
+	}
+	
+	public String getMovieName(){
+		return movieName;
+	}
+	
+	public int getSeatNumber(){
+		return seatNumber;
+	}
+	
+	public double getTicketPrice(){
+		return ticketPrice;
+	}
+	
+	public String displayDetails(){
+		return "Movie Name : "+ movieName +
+				"\n Seat Number :" + seatNumber +
+				"\n Ticket Price : " + ticketPrice;
+	}
+}
+

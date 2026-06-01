@@ -1,0 +1,335 @@
+Single Level Inheritance:
+Scenario:
+A software company is developing a transport management system. As a part of this system,
+you need to manage vehicle-related information. Every car is a type of vehicle,
+and it inherits some basic properties from the vehicle class. You need to design
+a program using single-level inheritance where a Car class inherits from a Vehicle class.
+
+Requirements:
+Create two classes: Vehicle and Car.
+
+The Vehicle class should contain:
+Instance variables: brand, speed
+A non-static method displayVehicleDetails() to print those details.
+
+The Car class should :
+Inherit from Vehicle
+Contain instance variables: model, fuelType
+
+Have a non-static method displayCarDetails() that:
+Accesses and prints its own variables
+Accesses and prints inherited variables
+Calls the inherited method displayVehicleDetails()
+
+In the Main class:
+
+Create an object of the Car class
+Call the displayCarDetails() method to print all information
+
+Test Case
+Input (hardcoded in variables):
+Vehicle brand: "Honda"
+Vehicle speed: 80
+Car model: "City"
+Fuel type: "Petrol"
+
+Expected Output:
+Car Model: City
+Fuel Type: Petrol
+Inherited Brand: Honda
+Inherited Speed: 80
+Vehicle Brand: Honda
+Top Speed: 80 km/h
+Note:
+You are not required to take input from the user. Just focus on demonstrating single-level
+inheritance and how subclass can access superclass properties and methods.
+-------------------------------------------------------------------------------------------
+Multilevel Inheritance
+A university management system needs to store academic details of students.
+Every Person has basic personal details. A Student inherits from Person, and a GraduateStudent
+inherits from Student and adds degree-specific information.
+
+Requirements:
+Create three classes: Person, Student, and GraduateStudent.
+
+The Person class should contain:
+Instance variables: name, age
+A method displayPersonDetails() to print the details.
+
+The Student class should:
+Inherit from Person
+Contain: studentId, course
+A method displayStudentDetails() to print all student details along with personal details
+by calling displayPersonDetails().
+
+The GraduateStudent class should:
+Inherit from Student
+Contain: degreeType, yearOfPassing
+A method displayGraduateDetails() to print all graduate student details, including inherited
+details.
+
+In the Main class:
+Create an object of GraduateStudent.
+Call displayGraduateDetails().
+
+Test Case (Hardcoded):
+Name: "Adya"  
+Age: 23  
+Student ID: "C13001"  
+Course: "Artificial Intelligence"  
+Degree Type: "M.Tech"  
+Year of Passing: 2024  
+
+Expected Output:
+Degree Type: M.Tech  
+Year of Passing: 2024  
+Student ID: C13001
+Course: Artificial Intelligence
+Name: Adya  
+Age: 23  
+
+-------------------------------------------------------------------------------------------
+MultiLevel Inheritance
+Scenario:
+A banking application tracks general account details. The BankAccount class stores basic
+account data, SavingsAccount adds interest-related info, and FixedDepositAccount further
+adds locking period info.
+
+Requirements:
+Create classes: BankAccount, SavingsAccount, FixedDepositAccount
+
+Class: BankAccount
+Variables: accountHolder, accountNumber
+Method: displayBankAccountInfo()
+
+Class: SavingsAccount (extends BankAccount)
+Variables: balance, interestRate
+Method: displaySavingsInfo() + call base method
+
+Class: FixedDepositAccount (extends SavingsAccount)
+Variables: depositAmount, lockPeriodInMonths
+
+Method: displayFDInfo() to:
+Display all info (own + inherited)
+Call displaySavingsInfo() and displayBankAccountInfo()
+
+Main class:
+Create an object of FixedDepositAccount
+Call displayFDInfo()
+
+Test Case (Hardcoded):
+Account Holder: "Emma"  
+Account Number: "ACC9987"  
+Balance: 100000  
+Interest Rate: 6.5%  
+Deposit Amount: 50000  
+Lock Period: 12 months  
+
+Expected Output:
+Deposit Amount: 50000  
+Lock Period: 12 months  
+Balance: 100000  
+Interest Rate: 6.5%  
+Account Holder: Emma  
+Account Number: ACC9987  
+-------------------------------------------------------------------------------------------
+Hierarchical Inheritance
+Scenario-Based Question:
+A hospital system needs to maintain information about different staff members.
+All staff members share common details, but Doctor and Nurse have their own specializations.
+
+Requirements:
+Create one base class: Staff, and two subclasses: Doctor, Nurse.
+The Staff class should contain:
+Instance variables: staffId, name
+Method: displayStaffDetails()
+
+The Doctor class should:
+Inherit from Staff
+Contain: specialization
+Method: displayDoctorDetails() – should print all details including inherited.
+
+The Nurse class should:
+Inherit from Staff
+Contain: department
+Method: displayNurseDetails() – should print all details including inherited.
+
+In the Main class:
+Create objects of Doctor and Nurse.
+Call their respective display methods.
+
+Test Case (Hardcoded):
+Doctor:  
+  ID: "D001", Name: "Dr. Smith", Specialization: "Cardiology"  
+Nurse:  
+  ID: "N001", Name: "Nina", Department: "ICU"  
+
+Expected Output:
+Doctor Specialization: Cardiology  
+Doctor Name: Dr. Smith  
+Doctor ID: D001  
+Nurse Department: ICU  
+Nurse Name: Nina  
+Nurse ID: N001  
+
+-------------------------------------------------------------------------------------------
+*******************************************************************************************
+Hierarchical Inheritance Example 1: Social Media User Types
+Scenario:
+A social media application has different types of users. All users share some common
+profile information, but users like Influencer and RegularUser have additional features
+specific to their roles. Use hierarchical inheritance to design this system.
+
+Requirements:
+Create a base class: User
+
+Create two subclasses: Influencer, RegularUser
+
+Class: User
+Instance variables: username, email
+Method: displayUserInfo() to print basic profile info
+
+Class: Influencer (extends User)
+Instance variables: followerCount, sponsorshipStatus
+Method: displayInfluencerInfo()
+Prints its own info
+Accesses inherited variables
+Calls displayUserInfo()
+
+Class: RegularUser (extends User)
+Instance variables: postCount, friendsCount
+Method: displayRegularUserInfo()
+Prints its own info
+Accesses inherited variables
+Calls displayUserInfo()
+
+Main class:
+Create objects of both Influencer and RegularUser
+Call their respective display methods
+
+Test Case (Hardcoded):
+Influencer:  
+  Username: "angel_priya"  
+  Email: "queen123@social.com"  
+  Follower Count: 50000  
+  Sponsorship Status: "Active"
+
+RegularUser:  
+  Username: "merchant_of_bay"  
+  Email: "mob@example.com"  
+  Post Count: 150  
+  Friends Count: 320  
+Expected Output:
+Influencer Details:
+Username: angel_priya  
+Email: queen123@social.com  
+Followers: 50000  
+Sponsorship: Active
+
+Regular User Details:
+Username: merchant_of_bay  
+Email: mob@example.com  
+Posts: 150  
+Friends: 320  
+**************************************************************************************
+Hierarchical Inheritance Example 2: Content Types in Social Media
+Scenario:
+In a social media platform, users can create different types of content like photos and videos.
+Each content type shares common metadata but adds unique features. Use hierarchical inheritance
+to demonstrate this.
+
+Requirements:
+Base class: Content
+Subclasses: Photo, Video
+Class: Content
+Instance variables: title, uploadedBy
+
+Method: displayContentInfo()
+Class: Photo (extends Content)
+Instance variables: resolution, filterUsed
+Method: displayPhotoInfo()
+Prints own + inherited info
+Calls displayContentInfo()
+
+Class: Video (extends Content)
+Instance variables: durationInSeconds, quality
+Method: displayVideoInfo()
+Prints own + inherited info
+Calls displayContentInfo()
+
+Main class:
+Create objects of Photo and Video
+Call their display methods
+
+Test Case (Hardcoded):
+Photo:  
+  Title: "Sunset Bliss"  
+  Uploaded By: "Emma"  
+  Resolution: "1080x720"  
+  Filter: "Vintage"
+
+Video:  
+  Title: "My Vlog"  
+  Uploaded By: "Liam"  
+  Duration: 300  
+  Quality: "HD"
+Expected Output:
+Photo Content:
+Title: Sunset Bliss  
+Uploaded By: Emma  
+Resolution: 1080x720  
+Filter Used: Vintage
+
+Video Content:
+Title: My Vlog  
+Uploaded By: Liam  
+Duration: 300 seconds  
+Quality: HD  
+--------------------------------------------------------
+*************************************************************
+Hierarchical Inheritance Example 3: Notifications System
+Scenario:
+In a social media app, different types of notifications are sent to users. All notifications
+have common data like recipient and message. Specific types like MessageNotification and
+FriendRequestNotification add their own unique details.
+
+Requirements:
+Base class: Notification
+Subclasses: MessageNotification, FriendRequestNotification
+
+Class: Notification
+Variables: recipientUsername, message
+Method: displayNotificationInfo()
+
+Class: MessageNotification (extends Notification)
+Variables: senderUsername
+Method: displayMessageNotification() – includes inherited details
+
+Class: FriendRequestNotification (extends Notification)
+Variables: requesterUsername
+Method: displayFriendRequestNotification() – includes inherited details
+
+Main class:
+Create objects of both subclasses and call display methods
+Test Case (Hardcoded):
+
+Message Notification:  
+  Recipient: "alex_92"  
+  Message: "You have a new message"  
+  Sender: "sarah23"
+
+Friend Request Notification:  
+  Recipient: "mike_88"  
+  Message: "You have a new friend request"  
+  Requester: "robin77"
+
+Expected Output:
+Message Notification:
+To: alex_92  
+From: sarah23  
+Message: You have a new message
+
+Friend Request Notification:
+To: mike_88  
+From: robin77  
+Message: You have a new friend request
